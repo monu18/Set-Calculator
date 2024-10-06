@@ -23,9 +23,18 @@ class SetCalculator
         @calc.set_y(values)
         puts "Set Y (Array): #{@calc.instance_variable_get(:@set_y)}"
       when 'm'
-        lambda_expr = eval(args)
-        @calc.apply_lambda(lambda_expr)
-        puts "Set X after applying lambda: #{@calc.instance_variable_get(:@set_x)}"
+        # Trim quotes if the lambda expression is passed as a string with quotes
+        args = args.strip  # Remove extra spaces
+        if args.start_with?('"') && args.end_with?('"')
+          args = args[1...-1]  # Remove the first and last quotes
+        end
+        lambda_expr = eval(args)  # Ensure that args is evaluated to a valid lambda expression
+        if lambda_expr.is_a?(Proc)
+          @calc.apply_lambda(lambda_expr)
+          puts "Set X after applying lambda: #{@calc.instance_variable_get(:@set_x)}"
+        else
+          puts "Invalid lambda expression"
+        end
       when 'a'
         @calc.add_to_x(args.to_i)
         puts "Set X after adding #{args.to_i}: #{@calc.instance_variable_get(:@set_x)}"
