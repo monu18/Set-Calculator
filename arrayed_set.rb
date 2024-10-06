@@ -1,4 +1,3 @@
-# arrayed_set.rb
 require './double_set'
 
 # Subclass for handling ArrayedSet
@@ -34,5 +33,10 @@ class ArrayedSet < DoubleSet
 
   def to_s
     @values.join(', ')
+  end
+
+  # Define the [] operator for accessing elements
+  def [](index)
+    @values[index]  # Fetch the element from the array
   end
 end

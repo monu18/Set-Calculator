@@ -43,10 +43,10 @@ class DoubleSet
     @set_y = @set_x.clone
   end
 
-  # List content of both sets
+  # List content of both sets using the [] operator in subclasses
   def list_sets
-    puts "Set X: #{@set_x}"
-    puts "Set Y: #{@set_y}"
+    puts "Set X: #{@set_x.values.join(', ')}"
+    puts "Set Y: #{@set_y.values.join(', ')}"
   end
 
   # Implement exit operation

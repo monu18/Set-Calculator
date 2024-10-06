@@ -16,7 +16,7 @@ Output:
 Set X: [10, 20, 30, 40]   # BST property is maintained
 Set Y: [5, 15, 25]
 
-3. Applying Lambda to Elements in Set X (TODO)
+3. Applying Lambda to Elements in Set X
 We can apply a lambda expression to modify the elements in set X. For instance, multiplying all elements by 2:
 > m "->(x) { x * 2 }"
 > l

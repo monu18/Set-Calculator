@@ -1,4 +1,3 @@
-# branching_set.rb
 require './double_set'
 
 # Subclass for handling BST (BranchingSet)
@@ -46,6 +45,11 @@ class BranchingSet < DoubleSet
 
   def to_s
     inorder.join(', ')
+  end
+
+  # Define the [] operator for accessing elements
+  def [](index)
+    inorder[index]  # Use inorder traversal to fetch the element
   end
 
   private
