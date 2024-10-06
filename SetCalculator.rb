@@ -1,6 +1,6 @@
-require './double_set'
-require './branching_set'
-require './arrayed_set'
+require './DoubleSet'
+require './BranchingSet'
+require './ArrayedSet'
 
 # Class for managing the Set Calculator operations
 class SetCalculator
@@ -60,7 +60,7 @@ class SetCalculator
       when 'q'
         @calc.quit  # Exit the program
       else
-        puts "Unknown command"  # Handle unrecognized commands
+        puts "Invalid command"  # Handle unrecognized commands
       end
     end
   end

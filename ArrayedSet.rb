@@ -1,4 +1,4 @@
-require './double_set'
+require './DoubleSet'
 
 # Subclass for handling ArrayedSet, storing elements in a sorted array
 class ArrayedSet < DoubleSet

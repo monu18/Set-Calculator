@@ -1,4 +1,4 @@
-require './double_set'
+require './DoubleSet'
 
 # Subclass for handling a Binary Search Tree (BranchingSet)
 class BranchingSet < DoubleSet
