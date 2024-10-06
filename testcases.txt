@@ -1,0 +1,70 @@
+Some test cases:
+
+1. Basic Initialization and Display
+This example initializes sets X and Y with different values and displays them.
+> X 10,20,30
+> Y 5,15,25
+> l
+Output:
+Set X: [10, 20, 30]
+Set Y: [5, 15, 25]
+
+2. Adding Values
+> a 40
+> l
+Output:
+Set X: [10, 20, 30, 40]   # BST property is maintained
+Set Y: [5, 15, 25]
+
+3. Applying Lambda to Elements in Set X (TODO)
+We can apply a lambda expression to modify the elements in set X. For instance, multiplying all elements by 2:
+> m "->(x) { x * 2 }"
+> l
+Output:
+Set X: [20, 40, 60, 80]   # All elements in X are multiplied by 2
+Set Y: [5, 15, 25]
+
+4. Union Operation
+Take the union of sets X and Y, storing the result in X.
+> u
+> l
+Output:
+Set X: [5, 15, 20, 25, 40, 60, 80]   # Union of X and Y
+Set Y: [5, 15, 25]
+
+5. Intersection Operation
+Now, let's reset the sets and try an intersection.
+> X 1,2,3,4,5
+> Y 3,4,5,6,7
+> i
+> l
+Output:
+Set X: [3, 4, 5]   # Intersection of X and Y
+Set Y: [3, 4, 5, 6, 7]
+
+6. Swapping Sets
+You can swap the contents of X and Y:
+> x
+> l
+Output:
+Set X: [3, 4, 5, 6, 7]    # X and Y are swapped
+Set Y: [3, 4, 5]
+
+7. Copying X to Y
+You can copy the contents of X to Y, making Y a copy of X:
+> c
+> l
+Output:
+Set X: [3, 4, 5, 6, 7]    # Y is now a copy of X
+Set Y: [3, 4, 5, 6, 7]
+
+8. Quit the Program
+You can quit the program and display the sets one last time by typing:
+> q
+Output:
+Set X: [3, 4, 5, 6, 7]
+Set Y: [3, 4, 5, 6, 7]
+
+Testing Notes:
+Invalid Commands: We can also test invalid commands, and the program should notify you with an "Invalid command!" message.
+> Z 1,2,3   # Invalid command
